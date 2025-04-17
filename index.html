@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GreenAgrowth - Invierte en el Futuro</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <h1 class="logo">GreenAgrowth</h1>
+      <nav>
+        <ul>
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#blog">Blog</a></li>
+          <li><a href="#contacto" class="cta-button">Contáctanos</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h2>Invierte Ahora</h2>
+      <h3><span class="highlight">Transforma Cultivos</span><br>Impulsa Comunidades</h3>
+      <p>Únete a nuestra plataforma de crowdfunding agrícola y contribuye al crecimiento sostenible y la equidad social.</p>
+      <a href="#comienza" class="cta-button">Comienza Hoy</a>
+    </div>
+    <div class="hero-image">
+      <img src="images/plant-hands.jpg" alt="Manos sosteniendo una planta">
+    </div>
+  </section>
+
+  <!-- Área Informativa Destacada -->
+  <section id="destacada" class="highlight recuadro">
+    <h2>Área Informativa Destacada</h2>
+    <p>Descubre algunos de nuestros proyectos agrícolas más exitosos y el impacto positivo que han tenido.</p>
+    <div class="project-grid">
+      <div class="project-item recuadro">
+        <img src="images/agave.jpg" alt="Agave Azul">
+        <h3>Agave Azul</h3>
+        <p>El agave es clave en México por su aporte económico, cultural y ambiental, especialmente en producción de tequila.</p>
+      </div>
+      <div class="project-item recuadro">
+        <img src="images/tomatoes.jpg" alt="Cultivos de Jitomate">
+        <h3>Cultivos de Jitomate</h3>
+        <p>México es el séptimo productor mundial de jitomate con más de 3 millones de toneladas anuales.</p>
+      </div>
+      <div class="project-item recuadro">
+        <img src="images/urban-gardens.jpg" alt="Huertos Urbanos">
+        <h3>Huertos Urbanos</h3>
+        <p>Iniciativas de huertos comunitarios en áreas urbanas para fomentar el autoabastecimiento y la comunidad.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonios -->
+  <section class="testimonials recuadro">
+    <h2>Testimonios de Clientes</h2>
+    <div class="testimonial-item recuadro">
+      <img src="images/testimonial.jpg" alt="Testimonio">
+      <p><span class="quote">“</span>Invertir en GreenAgrowth fue una decisión acertada. Transparentes y comprometidos con el desarrollo sostenible.<span class="quote">”</span></p>
+      <cite>- Jose Luis Kleemann</cite>
+    </div>
+  </section>
+
+  <!-- Sobre Nosotros -->
+  <section id="sobre-nosotros" class="about recuadro">
+    <h2>Sobre Nosotros</h2>
+    <p>GreenAgrowth es una innovadora plataforma de crowdfunding agrícola que conecta inversores con proyectos agrícolas sostenibles en todo el mundo. Ofrecemos la oportunidad de participar en proyectos que aseguran un crecimiento inclusivo y retornos financieros.</p>
+    <div class="about-grid">
+      <div class="about-text">
+        <ul>
+          <li>Plataforma fácil de usar que facilita la inversión en diversos proyectos agrícolas seleccionados.</li>
+          <li>Enfoque centrado en la sostenibilidad ambiental y el desarrollo comunitario.</li>
+          <li>Transparencia total y educación financiera para todos nuestros inversores.</li>
+        </ul>
+        <a href="#contacto" class="cta-button">Descubre Más</a>
+      </div>
+      <div class="about-images">
+        <img src="images/greenhouse.jpg" alt="Invernadero">
+        <img src="images/plants.jpg" alt="Plantas">
+      </div>
+    </div>
+  </section>
+
+  <!-- Calculadora de Inversión -->
+  <section id="calculadora" class="calculator recuadro">
+    <h2>Calculadora de Inversión</h2>
+    <p>Ingresa tu inversión inicial y el porcentaje de retorno para estimar tus ganancias.</p>
+    <form id="calculator-form">
+      <label for="investment">Inversión Inicial (MXN):</label>
+      <input type="number" id="investment" placeholder="Ejemplo: 10000" required>
+      <label for="rate">Porcentaje de Retorno (%):</label>
+      <input type="number" id="rate" placeholder="Ejemplo: 15" required>
+      <button type="button" class="cta-button" onclick="calculateEarnings()">Calcular</button>
+    </form>
+    <p id="result" class="result"></p>
+  </section>
+
+  <!-- Contacto -->
+  <section id="contacto" class="contact recuadro">
+    <h2>Contáctanos</h2>
+    <div class="contact-info">
+      <p><strong>Nuestra Ubicación:</strong> Jalisco, México</p>
+      <p><strong>Correo Electrónico:</strong> <a href="mailto:greenagrowth@gmail.com">greenagrowth@gmail.com</a></p>
+    </div>
+    <form action="#" method="post">
+      <input type="text" name="nombre" placeholder="Nombre" required>
+      <input type="text" name="apellido" placeholder="Apellido" required>
+      <input type="email" name="email" placeholder="Correo Electrónico" required>
+      <input type="tel" name="telefono" placeholder="Teléfono" required>
+      <textarea name="mensaje" placeholder="Mensaje" required></textarea>
+      <button type="submit" class="cta-button">Enviar Mensaje</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 GreenAgrowth. Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+    function calculateEarnings() {
+      const investment = parseFloat(document.getElementById('investment').value);
+      const rate = parseFloat(document.getElementById('rate').value);
+      if (isNaN(investment) || isNaN(rate)) {
+        document.getElementById('result').textContent = 'Por favor, ingresa valores válidos.';
+        return;
+      }
+      const earnings = (investment * rate) / 100;
+      document.getElementById('result').textContent = `Tus ganancias estimadas son: MXN ${earnings.toFixed(2)}`;
+    }
+  </script>
+</body>
+</html>
