@@ -1,0 +1,59 @@
+/* Estilo global para el fondo */
+body {
+    background-color: #f5f5f5; /* Fondo gris claro */
+    font-family: Arial, sans-serif; /* Fuente por defecto */
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo para los encabezados */
+h1, h2, h3 {
+    color: #333; /* Color del texto */
+    margin-bottom: 10px;
+}
+
+/* Estilo para los contenedores principales */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Estilo para los cuadros o recuadros */
+.recuadro {
+    background-color: white; /* Fondo blanco */
+    border: 1px solid #ccc; /* Borde gris */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 15px;
+    margin: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para el cuadro */
+}
+
+/* Botones */
+.cta-button {
+    background-color: #4CAF50; /* Verde */
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.cta-button:hover {
+    background-color: #45a049; /* Verde más oscuro al pasar el cursor */
+}
+
+/* Estilo para las imágenes dentro de cuadros */
+.recuadro img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+/* Estilo para el pie de página */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
